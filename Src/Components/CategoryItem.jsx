@@ -22,10 +22,7 @@ const CategoryItem = ({
 export default CategoryItem
 
 const styles = StyleSheet.create({
-    textCategory: {
-        fontSize: 18
-    },
-    additionalStyle: {
-      borderRadius: 15
-    }
-})
+  textCategory: {
+    fontSize: 18,
+  }
+});

@@ -1,8 +1,8 @@
 import { FlatList, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { colors } from './Global/Colors'
+import { colors } from '../Global/Colors'
 import categories from '../Data/categories.json'
-import CategoryItem from './Components/CategoryItem'
+import CategoryItem from '../Components/CategoryItem'
 
 const Home = ({
   navigation
@@ -22,8 +22,8 @@ const Home = ({
 export default Home
 
 const styles = StyleSheet.create({
-    container: {
-        backgroundColor: colors.LightPink,
-        alignItems: 'center',
-    }
-})
+  container: {
+    flex: 1,
+    backgroundColor: colors.White,
+  },
+});

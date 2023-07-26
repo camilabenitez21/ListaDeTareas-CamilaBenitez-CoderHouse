@@ -1,8 +1,8 @@
 import { SafeAreaView, StyleSheet } from 'react-native'
 import React from 'react'
 import Header from '../Components/Header'
-import ItemListCategory from './Screens/ItemListCategory'
-import ItemDetail from './Screens/ItemDetail'
+import ItemListCategory from '../Screens/ItemListCategory'
+import ItemDetail from '../Screens/ItemDetail'
 import Home from '../Screens/Home'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
@@ -47,8 +47,8 @@ const Navigator = () => {
 export default Navigator
 
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0
-    }
-  })
+  container: {
+    flex: 1,
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+  },
+});

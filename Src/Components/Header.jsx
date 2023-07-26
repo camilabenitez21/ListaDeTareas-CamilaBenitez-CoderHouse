@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { colors } from './Global/Colors'
+import { colors } from '../Global/Colors'
 
 const Header = () => {
   return (
@@ -14,14 +14,15 @@ const Header = () => {
 export default Header
 
 const styles = StyleSheet.create({
-    containerHeader: {
-        backgroundColor: colors.Grey,
-        justifyContent: 'center',
-        alignItems: 'center',
-        paddingVertical: 15,
-    },
-    text: {
-        fontSize: 25,
-        fontFamily: 'Josefin'
-    }
-})
+  containerHeader: {
+    height: 100, 
+    backgroundColor: colors.Grey,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  text: {
+    marginTop: 35,
+    fontSize: 25,
+    fontFamily: 'Josefin'
+  }
+});

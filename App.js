@@ -1,10 +1,10 @@
 import { useFonts } from 'expo-font';
-import Navigator from './src/Navigation/Navigator';
+import Navigator from './Src/Navigation/Navigator';
 
 export default function App() {
 
   const [fontsLoaded] = useFonts({
-    'Josefin': require('./src/Assets/Fonts/Josefin_Sans/JosefinSans-Regular.ttf')
+    'Josefin': require('./Src/Assets/Josefin_Sans_/JosefinSans-BoldItalic.ttf')
   });
 
   if (!fontsLoaded) {
