@@ -12,6 +12,7 @@ const Card = ({children, additionalStyle = []}) => {
 
 export default Card
 
+
 const styles = StyleSheet.create({
   cardContainer: {
     flexDirection: 'row',

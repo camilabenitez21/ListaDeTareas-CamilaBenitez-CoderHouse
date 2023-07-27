@@ -27,6 +27,7 @@ const ItemDetail = ({
   }, [width, height]);
 
   useEffect(() => {
+      //Encontrar el producto por su id
       const productSelected = allProducts.find(
           (product) => product.id === idSelected
           );
@@ -35,7 +36,6 @@ const ItemDetail = ({
 
   return (
       <View>
-          <Button onPress={() => navigation.goBack()} title="Go back" />
           {product ? (
               <View
                   style={
