@@ -40,11 +40,11 @@ const styles = StyleSheet.create({
     text: {
         fontFamily: "Josefin",
         fontSize: 19,
-        color: '#000000' ,
+        color: colors.Grey,
     },
     text2: {
         fontFamily: "Josefin",
         fontSize: 14,
-        color: `#696969`,
+        color: colors.LightPink,
     },
 });

@@ -70,14 +70,14 @@ const styles = StyleSheet.create({
         backgroundColor: colors.LightPink,
     },
     span: {
-        backgroundColor: '#f0fff0',
+        backgroundColor: colors.Grey,
         width: "60%",
         padding: 10,
         textAlign: "center",
         fontSize: 20,
     },
     spanInput: {
-        backgroundColor: '#ffe4b5',
+        backgroundColor: colors.White,
         width: "60%",
         padding: 10,
         textAlign: "center",

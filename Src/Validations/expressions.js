@@ -20,3 +20,6 @@ console.log(`El input: ${input}, contiene sólo números?: ${evaluation}`)
 console.log(`El input: ${input}, contiene sólo letras?: ${evaluation2}`)
 
 console.log(`El input: ${input}, contiene sólo letras y números?: ${evaluation3}`)
+
+
+

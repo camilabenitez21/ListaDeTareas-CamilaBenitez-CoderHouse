@@ -43,30 +43,25 @@ const Search = ({
 export default Search
 
 const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: 64,
-    paddingHorizontal: 16,
-    backgroundColor: colors.Pink,
-    minWidth: 350,
-  },
-  containerSm: {
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: 64,
-    paddingHorizontal: 16,
-    backgroundColor: colors.Pink,
-  },
-  input: {
-    flex: 1,
-    padding: 8,
-    fontSize: 18,
-    backgroundColor: colors.LightPink,
-    borderRadius: 10,
-    marginRight: 8,
-    maxWidth: 250,
-  },
-});
+    container: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '10%',
+        gap: 18,
+    },
+    containerSm: {
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '10%',
+
+    },
+    input: {
+        width: 250,
+        padding: 8,
+        fontSize: 18,
+        backgroundColor: colors.Pink,
+        borderRadius: 10,
+    }
+})

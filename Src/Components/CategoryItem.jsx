@@ -17,7 +17,6 @@ const CategoryItem = ({
     navigation.navigate('ItemListCategory', {category: item})
   }
   return (
-    <View style = {{width: width, alignItems: 'center'}}>
       <Pressable
         onPress={onSelectCategory}
       >
@@ -27,14 +26,17 @@ const CategoryItem = ({
             <Text style={styles.textCategory}>{item}</Text>
         </Card>
       </Pressable>
-    </View>
   )
 }
 
 export default CategoryItem
 
 const styles = StyleSheet.create({
-  textCategory: {
-    fontSize: 18,
-  }
-});
+
+    textCategory: {
+        fontSize: 18
+    },
+    additionalStyle: {
+      borderRadius: 15
+    }
+})
