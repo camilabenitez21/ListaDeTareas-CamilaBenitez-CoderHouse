@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         width: "100%",
-        backgroundColor: colors.Pink,
+        backgroundColor: colors.pink,
         padding: 10,
     },
     buttonsContainer: {
@@ -67,17 +67,17 @@ const styles = StyleSheet.create({
     },
     button: {
         padding: 10,
-        backgroundColor: colors.LightPink,
+        backgroundColor: colors.lightPink,
     },
     span: {
-        backgroundColor: colors.Grey,
+        backgroundColor: colors.red,
         width: "60%",
         padding: 10,
         textAlign: "center",
         fontSize: 20,
     },
     spanInput: {
-        backgroundColor: colors.White,
+        backgroundColor: colors.peach,
         width: "60%",
         padding: 10,
         textAlign: "center",

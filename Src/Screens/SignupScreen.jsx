@@ -39,7 +39,6 @@ const SignupScreen = ({ navigation }) => {
 
     const onSubmit = () => {
         try {
-            //Submit logic with validations
             const isValidVariableEmail = isValidEmail(email)
             const isCorrectPassword = isAtLeastSixCharacters(password)
             const isRepeatedPasswordCorrect = password === confirmPassword
@@ -107,7 +106,7 @@ const styles = StyleSheet.create({
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: colors.LightPink,
+        backgroundColor: colors.lightPink,
         gap: 15,
         paddingVertical: 20,
         borderRadius: 10,
@@ -119,11 +118,11 @@ const styles = StyleSheet.create({
     sub: {
         fontSize: 14,
         fontFamily: "Josefin",
-        color: "#000000",
+        color: "black",
     },
     subLink: {
         fontSize: 14,
         fontFamily: "Josefin",
-        color: "#5f9ea0",
+        color: "blue",
     },
 });

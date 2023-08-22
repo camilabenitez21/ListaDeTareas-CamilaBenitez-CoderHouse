@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     button: {
         width: "80%",
         borderWidth: 1,
-        backgroundColor: colors.Pink,
+        backgroundColor: colors.pink,
         justifyContent: "center",
         alignItems: "center",
         padding: 8
@@ -31,6 +31,6 @@ const styles = StyleSheet.create({
     text: {
         fontFamily: "Ubuntu",
         fontSize: 18,
-        color: colors.LightPink,
+        color: colors.lightPink,
     },
 });

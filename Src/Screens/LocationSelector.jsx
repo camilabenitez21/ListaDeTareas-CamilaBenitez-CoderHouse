@@ -54,7 +54,6 @@ const LocationSelector = ({ navigation }) => {
         triggerPostAddress({location: locationFormatted, localId}) */
     }
     
-    //Location requested on mount
     useEffect(() => {
         (async () => {
             try {
@@ -77,7 +76,6 @@ const LocationSelector = ({ navigation }) => {
         })()
     }, [])
 
-    //Reverse geocoding
     useEffect(() => {
         (async () => {
             try {
@@ -143,13 +141,14 @@ const styles = StyleSheet.create({
         width: 200,
         height: 200,
         borderWidth: 2,
-        borderColor: colors.Grey,
+        borderColor: colors.peach,
         padding: 10,
         justifyContent: "center",
         alignItems: "center",
     },
     address: {
         padding: 10,
+        fontFamily: "Ubuntu",
         fontSize: 16,
     },
 });

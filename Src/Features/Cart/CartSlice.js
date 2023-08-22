@@ -13,6 +13,7 @@ export const cartSlice = createSlice({
     reducers: {
         addCartItem: (state, action) => {
             const productExists = state.value.items.some(item => item.id === action.payload.id)
+
             if (productExists) {
                 state.value.items = state.value.items.map(item => {
                     if (item.id === action.payload.id) {
@@ -31,7 +32,6 @@ export const cartSlice = createSlice({
             state.value.updatedAt = new Date().toLocaleString()
         },
         removeCartItem: (state,action) => {
-
         }
     }
 })

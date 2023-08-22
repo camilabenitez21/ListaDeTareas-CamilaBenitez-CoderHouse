@@ -25,10 +25,10 @@ const styles = StyleSheet.create({
         shadowRadius: 3.84,
         elevation: 8,
         borderWidth: 2,
-        borderColor: '000000',
+        borderColor: 'black',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: colors.Grey,
+        backgroundColor: colors.red,
         marginVertical: 10,
         borderRadius: 8,
     }

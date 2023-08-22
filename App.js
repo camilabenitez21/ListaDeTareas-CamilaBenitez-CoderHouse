@@ -1,31 +1,39 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react'; 
 import { useFonts } from 'expo-font';
 import { Provider } from 'react-redux';
 
-import Navigator from './src/Navigation/Navigator';
+import Navigator from './Src/Navigation/Navigator'
 import store from './Src/Store/store';
-import { init } from './Src/SQLite/index';
+import { init } from './Src/SQLite';
 
 export default function App() {
+  const [isDbInitialized, setIsDbInitialized] = useState(false); 
+  const [isFontsLoaded, setIsFontsLoaded] = useState(false); 
+
   useEffect(() => {
+
     init()
       .then((result) => {
-        console.log('DB initialized/dropped');
-        console.log(result);
+        setIsDbInitialized(true); 
       })
-      .catch((err) => {
-        console.log('Initialization DB failed:');
-        console.log(err.message);
+      .catch(err => {
+
       });
   }, []);
 
   const [fontsLoaded] = useFonts({
-    'Josefin': require('./src/Assets/Fonts/Josefin_Sans/JosefinSans-Regular.ttf'),
-    'Ubuntu': require('./src/Assets/Fonts/Ubuntu/Ubuntu-Regular.ttf')
+    'JosefinSans-Bold': require('./Src/Assets/Fonts/Josefin_Sans_/JosefinSans-Bold.ttf'),
+    'JosefinSans-Italic': require('./Src/Assets/Fonts/Josefin_Sans_/JosefinSans-Italic.ttf'),
   });
 
-  if (!fontsLoaded) {
-    return null;
+  useEffect(() => {
+    if (fontsLoaded) {
+      setIsFontsLoaded(true);
+    }
+  }, [fontsLoaded]);
+
+  if (!isDbInitialized || !isFontsLoaded) {
+    return null; 
   }
 
   return (

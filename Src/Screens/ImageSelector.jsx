@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Image, View, StyleSheet, Text } from "react-native";
 import * as ImagePicker from "expo-image-picker";
 import AddButton from "../Components/AddButton";
-import { Colors } from '../Global/Colors';
+import { colors } from "../Global/Colors";
 import * as MediaLibrary from "expo-media-library";
 import { usePostProfileImageMutation } from "../Services/shopServices";
 import { useDispatch, useSelector } from "react-redux";
@@ -25,16 +25,13 @@ const ImageSelector = ({ navigation }) => {
 
     const pickImage = async () => {
 
-
         const isCameraOk = await verifyCameraPermissions();
 
         if (isCameraOk) {
-
             let result = await ImagePicker.launchCameraAsync({
                 mediaTypes: ImagePicker.MediaTypeOptions.All,
                 allowsEditing: true,
                 aspect: [1, 1],
-                //base64: true,
                 quality: 1,
             });
 
@@ -48,19 +45,15 @@ const ImageSelector = ({ navigation }) => {
 
     const confirmImage = async () => {
         try {
-            // Request device storage access permission
             const { status } = await MediaLibrary.requestPermissionsAsync();
             if (status === "granted") {
                 console.log("Only valid on emulators and physical devices");
-                // Save image to media library and create an asset
                 const response = await MediaLibrary.createAssetAsync(image);
                 console.log(response.uri);
-                //Save image link on profileImages remote location
                 triggerSaveImage({
                     image: response.uri,
                     localId: localId,
                 });
-                // Set image on redux state
                 dispatch(saveImage(response.uri));
             }
         } catch (error) {

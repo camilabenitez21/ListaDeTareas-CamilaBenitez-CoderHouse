@@ -31,7 +31,7 @@ const ItemDetail = ({
     }, [width, height]);
 
     useEffect(() => {
-
+        //Encontrar el producto por su id
         const productSelected = allProducts.find(
             (product) => product.id === idSelected
             );

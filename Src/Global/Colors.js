@@ -1,6 +1,6 @@
-export const colors ={
-    White: '#F6F6F6',
-    LightPink:'#FFE2E2',
-    Pink:'#FFC7C7',
-    Grey: '#AAAAAA',
+export const colors = {
+    red: "#FF6666",
+    peach: "#FF8989",
+    pink: "#FCAEAE",
+    lightPink: "#FFEADD"
 }

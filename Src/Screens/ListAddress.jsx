@@ -10,6 +10,7 @@ const ListAddress = ({ navigation }) => {
     const {data: userLocationQuery, isError, isLoading} = useGetUserLocationQuery(localId)
 
 
+
     return location?.latitude || userLocationQuery ? (
         <AddressItem 
             location={location.latitude ? location : userLocationQuery} 

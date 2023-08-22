@@ -6,7 +6,6 @@ import { useSelector } from "react-redux";
 import { useGetProfileImageQuery } from "../Services/shopServices";
 
 const MyProfile = ({navigation}) => {
-    // const {profileImage, imageCamera} = useSelector(state => state.authReducer.value);
 
     const {localId, profileImage} = useSelector(state => state.userReducer.value)
 

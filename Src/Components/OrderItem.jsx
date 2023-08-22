@@ -27,7 +27,7 @@ export default OrderItem;
 const styles = StyleSheet.create({
     card: {
         height: 100,
-        backgroundColor: colors.Grey,
+        backgroundColor: colors.peach,
         padding: 10,
         margin: 10,
         borderWidth: 2,
@@ -45,11 +45,11 @@ const styles = StyleSheet.create({
     text: {
         fontFamily: "Josefin",
         fontSize: 17,
-        color: "000000",
+        color: "black",
     },
     text2: {
         fontFamily: "Josefin",
         fontSize: 19,
-        color: "#dc143c",
+        color: "gray",
     },
 });

@@ -5,7 +5,7 @@ import { AntDesign } from "@expo/vector-icons";
 import { SimpleLineIcons } from "@expo/vector-icons";
 import { useDispatch, useSelector } from "react-redux";
 import { signOut } from "../Features/User/userSlice";
-import { deleteSession } from "../SQLite/index";
+import { deleteSession } from "../SQLite";
 
 const Header = ({ route, navigation }) => {
     let title;
@@ -57,7 +57,7 @@ export default Header;
 
 const styles = StyleSheet.create({
     containerHeader: {
-        backgroundColor: colors.Grey,
+        backgroundColor: colors.peach,
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
@@ -66,6 +66,7 @@ const styles = StyleSheet.create({
     },
     text: {
         fontSize: 25,
+        fontFamily: "Ubuntu",
     },
     pressable: {
         position: "absolute",

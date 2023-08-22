@@ -13,7 +13,6 @@ const ItemListCategory = ({
 }) => {
 
   const {category} = route.params
-  //const productsSelected = useSelector (state => state.shopReducer.value.productsSelected)
   const categorySelected = useSelector (state => state.shopReducer.value.categorySelected)
   const {data: productsSelected, isError, isLoading} = useGetProductsByCategoryQuery(categorySelected)
 
@@ -22,7 +21,6 @@ const ItemListCategory = ({
   const [keywordError, setKeywordError] = useState("")
 
   useEffect(()=> {
-    //Lógica de manejo de category
     if (productsSelected) {
       const productsFiltered = productsSelected.filter(product => product.title.toLocaleLowerCase().includes(keyword.toLowerCase()))
       setProducts(productsFiltered)
@@ -68,7 +66,7 @@ export default ItemListCategory
 const styles = StyleSheet.create({
     container: {
         height: '100%',
-        backgroundColor: colors.LightPink,
+        backgroundColor: colors.lightPink,
         alignItems: 'center'
     }
 })

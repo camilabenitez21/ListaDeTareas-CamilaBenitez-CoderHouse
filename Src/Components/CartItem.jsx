@@ -1,50 +1,42 @@
-import { StyleSheet, Text, View } from "react-native";
-import React from "react";
-import { colors } from "../Global/Colors";
-import { Entypo } from "@expo/vector-icons";
+import { Pressable, StyleSheet, Text, View, useWindowDimensions } from 'react-native'
+import React from 'react'
+import Card from './Card'
+import { useDispatch } from 'react-redux'
+import { setCategorySelected } from '../Features/Shop/shopSlice'
 
-const CartItem = ({ cartItem }) => {
-    console.log(cartItem);
-    return (
-        <View style={styles.card} onPress={() => {}}>
-            <View style={styles.textContainer}>
-                <Text style={styles.text}>{cartItem.title} ({cartItem.quantity})</Text>
-                <Text style={styles.text2}>{cartItem.brand}</Text>
-                <Text style={styles.text2}>${cartItem.price}</Text>
-            </View>
-            <Entypo name="trash" size={30} color="black" />
-        </View>
-    );
-};
+const CategoryItem = ({
+  item,
+  navigation
+}) => {
+  const {width} = useWindowDimensions()
 
-export default CartItem;
+  const dispatch = useDispatch()
+
+  const onSelectCategory = () => {
+    dispatch(setCategorySelected(item))
+    navigation.navigate('ItemListCategory', {category: item})
+  }
+  return (
+      <Pressable
+        onPress={onSelectCategory}
+      >
+        <Card
+          additionalStyle={styles.additionalStyle}
+        >
+            <Text style={styles.textCategory}>{item}</Text>
+        </Card>
+      </Pressable>
+  )
+}
+
+export default CategoryItem
 
 const styles = StyleSheet.create({
-    card: {
-        height: 100,
-        backgroundColor: colors.Pink,
-        padding: 10,
-        margin: 10,
-        borderWidth: 2,
-        borderRadius: 10,
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
+
+    textCategory: {
+        fontSize: 18
     },
-    textContainer: {
-        width: "70%",
-        flexDirection: "column",
-        justifyContent: "flex-start",
-        alignItems: "flex-start",
-    },
-    text: {
-        fontFamily: "Josefin",
-        fontSize: 19,
-        color: colors.Grey,
-    },
-    text2: {
-        fontFamily: "Josefin",
-        fontSize: 14,
-        color: colors.LightPink,
-    },
-});
+    additionalStyle: {
+      borderRadius: 15
+    }
+})

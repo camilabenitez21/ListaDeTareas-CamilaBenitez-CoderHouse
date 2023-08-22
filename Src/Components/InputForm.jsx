@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     },
     error: {
         fontSize: 16,
-        color: 'a52a2a',
+        color: 'red',
         fontFamily: 'Josefin',
         fontStyle: 'italic',
     },
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
         width: '90%',
         borderWidth: 0,
         borderBottomWidth: 3,
-        borderBottomColor: colors.Grey,
+        borderBottomColor: colors.peach,
         padding: 2,
         fontFamily: 'Josefin',
         fontSize: 14,

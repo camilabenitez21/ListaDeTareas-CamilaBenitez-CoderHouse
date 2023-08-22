@@ -14,7 +14,7 @@ export default SubmitButton;
 
 const styles = StyleSheet.create({
     button: {
-        backgroundColor:`#ff7f50`,
+        backgroundColor: colors.red,
         borderRadius: 6,
         justifyContent: 'center',
         alignItems: 'center',
@@ -22,7 +22,8 @@ const styles = StyleSheet.create({
         width: '60%'
     },
     text: {
-        color: colors.LightPink,
+        color: colors.lightPink,
+        fontFamily: 'Ubuntu',
         fontSize: 22
     },
 });

@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
       gap: 20,
     },
     container: {
-        backgroundColor: colors.LightPink,
+        backgroundColor: colors.lightPink,
         alignItems: 'center',
     },
     flatlist: {

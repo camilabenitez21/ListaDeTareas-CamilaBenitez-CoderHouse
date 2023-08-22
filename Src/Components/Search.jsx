@@ -4,6 +4,12 @@ import { FontAwesome } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { colors } from '../Global/Colors';
 
+/**
+ * Search component for ItemListContainer
+ * @param onSearch Callback when search
+ * @param error For showing error 
+ */
+
 const Search = ({
     onSearch,
     error = "",
@@ -55,13 +61,13 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         height: '10%',
-
+        // gap: 18,
     },
     input: {
         width: 250,
         padding: 8,
         fontSize: 18,
-        backgroundColor: colors.Pink,
+        backgroundColor: colors.pink,
         borderRadius: 10,
     }
 })
